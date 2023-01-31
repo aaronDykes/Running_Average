@@ -25,7 +25,6 @@ void run()
     init(&n);
 
     while (1) {
-
         enqueue(&old);
         sum         +=  *(q->data + ((q->head - 1)%MAX));
         run_ave     =   (q->head > n) ? n : q->head;
