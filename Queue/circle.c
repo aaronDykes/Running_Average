@@ -1,15 +1,6 @@
 #include "circle.h"
 
 
-static Bool is_full(),
-            is_empty();
-
-static void enqueue (int*),
-            init (int*),
-            destroy(),
-            print_result(double, int);
-
-
 void run()
 {
     q               = malloc(sizeof(Qu));
