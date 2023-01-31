@@ -14,10 +14,10 @@ void run()
 
     while (1) {
         enqueue(&old);
-        sum         +=  *(q->data + ((q->head - 1)%MAX));
+        sum         +=  *(int*)(q->data + ((q->head - 1)%MAX));
         run_ave     =   (q->head > n) ? n : q->head;
         if (q->head >   n)
-            sum     -=  *(q->data + ((old++)%MAX));
+            sum     -=  *(int*)(q->data + ((old++)%MAX));
         print_result(sum, run_ave);
     }
     destroy();
@@ -48,7 +48,7 @@ static void print_result(double sum, int run_ave)
 static void enqueue(int *old)
 {
     printf("\nEnter a number into the buffer: ");
-    scanf("%d", (q->data + ((q->head++)%MAX)));
+    scanf("%d", (int*)(q->data + ((q->head++)%MAX)));
     if (is_full()) 
     {
         q->tail++;

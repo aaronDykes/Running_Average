@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include    <stdio.h>
+#include    <stdlib.h>
+#include    <string.h>
 
 #define     EMPTY   0
 #define     MAX     10
