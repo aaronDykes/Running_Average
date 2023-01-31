@@ -1,7 +1,7 @@
 Hey folks,
 
-This is my implementation of a circular queue in C. The primary functionality of this code 
-is to take a running average of an nth term provided by the user.
+This is my implementation of a circular queue in C. Primary functionality of this code 
+is to calculate the running average of an nth term provided by the user.
 
 
 cd into the Queue directory and run make to generate an executable named "circle".
