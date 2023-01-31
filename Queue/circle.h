@@ -1,15 +1,13 @@
 #include "depend.h"
 
 
-static Queue q;
+static Queue    q;
+static Bool     is_full();
 
+static void     enqueue (int*),
+                init (int*),
+                destroy(),
+                print_result(double, int);
 
-static Bool is_full(),
-            is_empty();
+void            run();
 
-static void enqueue (int*),
-     init (int*),
-     destroy(),
-     print_result(double, int);
-
-void run();

@@ -7,26 +7,20 @@
 #define     MAX     10
 
 
-
-typedef enum 
-{
+typedef enum {
     FALSE,
     TRUE
-}
-Bool;
+} Bool;
 
-struct queue
-{
+struct queue {
     int *data,
         head,
         tail;
 } queue;
 
+
 typedef struct queue Qu;
 typedef Qu *Queue;
 
 extern void run();
-
-
-
 

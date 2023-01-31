@@ -1,27 +1,24 @@
 #include "circle.h"
 
 
-
 static Bool is_full(),
-     is_empty();
+            is_empty();
 
 static void enqueue (int*),
-     init (int*),
-     destroy(),
-     print_result(double, int);
+            init (int*),
+            destroy(),
+            print_result(double, int);
 
 
 void run()
 {
     q               = malloc(sizeof(Qu));
     q->data         = malloc(sizeof(int) * MAX);
-
     int     run_ave = EMPTY,
             n       = EMPTY,
             old     = EMPTY;
     double  sum     = EMPTY;
-
-
+    
     init(&n);
 
     while (1) {
@@ -43,7 +40,20 @@ static void init(int *n)
     q->head = EMPTY;
     q->tail = EMPTY;
 }
+static void destroy()
+{
+    free(q->data);
+    free(q);
+}
 
+
+static void print_result(double sum, int run_ave)
+{
+    printf("\nBuffer contents:\n");
+    for (int i = 0; i < MAX; i++)
+        printf("%d ", *(int*)(q->data + i));
+    printf("\n\nAveraged over: %d, Average: %lf\n\n", q->head, sum / run_ave);
+}
 static void enqueue(int *old)
 {
     printf("\nEnter a number into the buffer: ");
@@ -54,35 +64,10 @@ static void enqueue(int *old)
         old++; 
     }
 }
-static void print_result(double sum, int run_ave)
-{
-    printf("\nBuffer contents:\n");
-    for (int i = 0; i < MAX; i++)
-        printf("%d ", *(int*)(q->data + i));
-    printf("\n\nAveraged over: %d, Average: %lf\n\n", q->head, sum / run_ave);
-}
-
-static void destroy()
-{
-    free(q->data);
-    free(q);
-}
 
 
 static Bool is_full() 
 {
     return ((Bool) (q->head == MAX - 1));
 }
-
-static Bool is_empty() 
-{
-    return ((Bool) (q->head == EMPTY));
-}
-
-
-
-
-
-
-
 
