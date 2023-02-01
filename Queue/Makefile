@@ -1,6 +1,6 @@
-.PHONY	:= all clean
-CC 		:= gcc
-FLAGS 	:= -g
+.PHONY			:= all clean
+CC 				:= gcc
+FLAGS 			:= -g
 
 all:			circle
 
