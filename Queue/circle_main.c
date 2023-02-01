@@ -1,5 +1,6 @@
-#include "depend.h"
+#include <stdlib.h>
 
+extern void run();
 
 int main (int args, char** argv)
 {
