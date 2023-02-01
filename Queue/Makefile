@@ -1,9 +1,18 @@
+.PHONY	:= all clean
+CC 		:= gcc
+FLAGS 	:= -g
+
+all:			circle
+
 circle:			circle_main.o circle.o
-				gcc -o circle -g circle_main.o circle.o
+				${CC} ${FLAGS} -o circle circle_main.o circle.o
 
 circle_main.o:	circle_main.c depend.h
-				gcc -c circle_main.c -g
+				${CC} ${FLAGS} -c circle_main.c
 
 circle.o:		circle.c circle.h depend.h
-				gcc -c circle.c -g
+				${CC} ${FLAGS} -c circle.c -g
+
+clean:			
+				rm circle
 
