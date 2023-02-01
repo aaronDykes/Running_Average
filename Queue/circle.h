@@ -9,5 +9,3 @@ static void     enqueue (int*),
                 destroy(),
                 print_result(double, int);
 
-void            run();
-
