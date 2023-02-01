@@ -14,5 +14,5 @@ circle.o:		circle.c circle.h depend.h
 				${CC} ${FLAGS} -c circle.c
 
 clean:			
-				rm circle
+				rm circle *.o
 
