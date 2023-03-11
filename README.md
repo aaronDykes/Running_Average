@@ -4,7 +4,7 @@ Hey folks,
 This is my implementation of a circular queue in C. It's primary functionality 
 is to calculate the running average of an nth term provided by the user.
 
-cd into the Queue directory and run make to generate an executable named "circle".
+cd into the Queue directory and run make to generate a "circle" executable.
 
 Once run: 
   - User will be prompted to enter the nth term to average over.
